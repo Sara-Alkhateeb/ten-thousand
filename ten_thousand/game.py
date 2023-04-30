@@ -1,5 +1,6 @@
 
-from ten_thousand.game_logic import GameLogic
+from game_logic import GameLogic
+# from ten_thousand.game_logic import GameLogic
 
 dice_roller = GameLogic.roll_dice
 
@@ -40,26 +41,24 @@ def start_game(max_round=40):
         unbanked_score = 0
         dice_kept = []
         while True:
-            choice=cheater_function()
+            choice=ask_for_input()
             if choice == "q":
                 break
 
             dice_kept = [int(x) for x in choice]
             
-            cheater=cheater_again(dice_roll,dice_kept,unpacked_tuple)
+            cheater=cheater_function(dice_roll,dice_kept,unpacked_tuple)
                     
-            cheater_repet=False
+            # cheater_repet=False
             while cheater:
-                choice=cheater_function()
+                choice=ask_for_input()
                 if choice == "q":
                     break
                 elif choice!="q":
                     dice_kept = [int(x) for x in choice]
-                    break
-                elif not cheater_repet:
-                        break
-                else:
-                    cheater_repet= cheater_again(dice_roll,dice_kept,unpacked_tuple)
+                    cheater= cheater_function(dice_roll,dice_kept,unpacked_tuple)
+                
+                
             if choice=="q":
                 break
             round_score = GameLogic.calculate_score(dice_kept)
@@ -104,12 +103,12 @@ def start_game(max_round=40):
 def decline_game():
     print("OK. Maybe another time")
 
-def cheater_function():
+def ask_for_input():
     print("Enter dice to keep, or (q)uit:")
     choice = input("> ")
     return choice
 
-def cheater_again(dice_roll,dice_kept,unpacked_tuple):
+def cheater_function(dice_roll,dice_kept,unpacked_tuple):
     cheater=False
     z=list(dice_roll)
     for x in dice_kept:
