@@ -1,7 +1,7 @@
-# ten-thousand Project (LAB06 - Class 06 -File IO and Exceptions)
+# ten-thousand Project 
 
 ## Overview
-The ten-thousand Project is a Python application game, begin working on a command line version of the dice game Ten Thousand using core Python tools and understanding of the basics of the language. The game is also known as Ten Thousand, Zilch or Foo.The project was created as part of LAB06 for Class 06 by Sara Alkhateeb.
+The ten-thousand Project is a Python application game, begin working on a command line version of the dice game Ten Thousand using core Python tools and understanding of the basics of the language. The game is also known as Ten Thousand, Zilch or Foo.The project was created as part of python courses by Sara Alkhateeb.
 
 ## How to initialize the application, follow these steps:
 
