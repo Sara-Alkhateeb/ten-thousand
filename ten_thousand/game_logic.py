@@ -86,8 +86,8 @@ class GameLogic:
                                                                                                                   
       return unbanked_points     
 
-@staticmethod
-def validate_keepers(dice_roll,dice_kept):
+    @staticmethod
+    def validate_keepers(dice_roll,dice_kept):
         cheater=True
         z=list(dice_roll)
         for x in dice_kept:
@@ -97,8 +97,8 @@ def validate_keepers(dice_roll,dice_kept):
                 z.remove(x)
         return cheater 
    
-@staticmethod
-def get_scorers(test_input):
+    @staticmethod
+    def get_scorers(test_input):
         main_score = GameLogic.calculate_score(test_input)
         # print(main_score)
         scorers = []
