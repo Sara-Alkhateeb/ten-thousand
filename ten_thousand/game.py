@@ -2,13 +2,13 @@ from ten_thousand.game_logic import GameLogic
 
 dice_roller = GameLogic.roll_dice
 
-def play(roller=GameLogic.roll_dice):
+def play(roller=GameLogic.roll_dice,num_rounds=10):
     global dice_roller
     dice_roller = roller
 
     choice = invite_to_play()
     if choice == "y":
-        score = start_game()
+        score = start_game(num_rounds)
         print(f"Thanks for playing. You earned {score} points")
     else:
         decline_game()
@@ -19,7 +19,7 @@ def invite_to_play():
     choice = input("> ")
     return choice
 
-def start_game(max_round=40):
+def start_game(max_round):
     round_num = 0
     total_score = 0
     choice=""
