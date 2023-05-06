@@ -4,7 +4,7 @@ dice_roller = GameLogic.roll_dice
 
 
 
-def play(roller=GameLogic.roll_dice):
+def play(roller=GameLogic.roll_dice, num_rounds=10):
     """
     A function to start the Ten Thousand game. Prompts the user whether to play the game or not.
     If the user chooses to play, it starts the game by calling the start_game function.
@@ -43,7 +43,7 @@ def invite_to_play():
 
 
 
-def start_game(max_round=40):
+def start_game(max_round):
     """
     A function to start the Ten Thousand game.
 
