@@ -14,7 +14,7 @@ def play(roller=GameLogic.roll_dice):
 
     Returns:
     None
-"""
+    """
     global dice_roller
     dice_roller = roller
 
@@ -52,7 +52,7 @@ def start_game(max_round=40):
 
     Returns:
     total_score (int): The total score earned by the player in the game.
-"""
+    """
     round_num = 0
     total_score = 0
     choice=""
